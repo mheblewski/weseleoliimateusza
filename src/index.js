@@ -1,12 +1,23 @@
+import './styles/general.css'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './components/App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.querySelector('#root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+let mainNavLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+  
+    mainNavLinks.forEach(link => {
+      let section = document.querySelector(link.hash);
+      if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+        if(!link.classList.contains("current")) {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });

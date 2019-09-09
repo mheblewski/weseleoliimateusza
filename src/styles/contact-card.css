@@ -1,0 +1,68 @@
+.contact-card {
+    /* width: 42%; */
+    height: 12vw;
+    border: 3px var(--main-gold-color) solid;
+    display: flex;
+    align-items: center;
+    
+}
+
+.contact-card:not(:last-child) {
+    margin-bottom: 3%;
+}
+
+.contact-image {
+    height: 80%;
+    width: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.contact-text {
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+.contact-text p {
+    margin: 0;
+}
+
+.contact-text .description {
+    color: var(--main-gold-color);
+    font-size: 2.3vw;
+    font-weight: bold;
+}
+
+.contact-text .name {
+    font-size: 1.8vw;
+}
+
+.contact-text .phone {
+    margin-top: 20px;
+    font-size: 2.4vw;
+}
+
+.parents-contact-text {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parents-contact-text p {
+    margin: 0;
+}
+
+.parents-description {
+    color: var(--main-gold-color);
+    font-size: 1.9vw;
+    font-weight: bold;
+}
+
+.parents-phone {
+    margin-top: 20px;
+    font-size: 2.2vw;
+}
