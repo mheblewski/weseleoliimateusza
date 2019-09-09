@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "92b58401b3a600c9cb14ddb093e7fe20",
+    "revision": "b5c35cd7f79aae82ff94dbe4c3f058d1",
     "url": "/weseleoliimateusza/index.html"
   },
   {
@@ -8,15 +8,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weseleoliimateusza/static/css/2.7abef457.chunk.css"
   },
   {
-    "revision": "09fa2a4bc235899d227f",
-    "url": "/weseleoliimateusza/static/css/main.ef934f7a.chunk.css"
+    "revision": "c16e66bcb76525624b2a",
+    "url": "/weseleoliimateusza/static/css/main.a33622cc.chunk.css"
   },
   {
     "revision": "3b09b760167c234ec865",
     "url": "/weseleoliimateusza/static/js/2.28c29d80.chunk.js"
   },
   {
-    "revision": "09fa2a4bc235899d227f",
+    "revision": "c16e66bcb76525624b2a",
     "url": "/weseleoliimateusza/static/js/main.efdcd5ac.chunk.js"
   },
   {
