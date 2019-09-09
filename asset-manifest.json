@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weseleoliimateusza/static/css/main.a33622cc.chunk.css",
+    "main.css": "/weseleoliimateusza/static/css/main.c79b710d.chunk.css",
     "main.js": "/weseleoliimateusza/static/js/main.efdcd5ac.chunk.js",
     "main.js.map": "/weseleoliimateusza/static/js/main.efdcd5ac.chunk.js.map",
     "runtime~main.js": "/weseleoliimateusza/static/js/runtime~main.4d93a59e.js",
@@ -9,9 +9,9 @@
     "static/js/2.28c29d80.chunk.js": "/weseleoliimateusza/static/js/2.28c29d80.chunk.js",
     "static/js/2.28c29d80.chunk.js.map": "/weseleoliimateusza/static/js/2.28c29d80.chunk.js.map",
     "index.html": "/weseleoliimateusza/index.html",
-    "precache-manifest.409c21811f828afc8278048fcfd0229b.js": "/weseleoliimateusza/precache-manifest.409c21811f828afc8278048fcfd0229b.js",
+    "precache-manifest.c82e025a515b083a3811c1c776013528.js": "/weseleoliimateusza/precache-manifest.c82e025a515b083a3811c1c776013528.js",
     "service-worker.js": "/weseleoliimateusza/service-worker.js",
     "static/css/2.7abef457.chunk.css.map": "/weseleoliimateusza/static/css/2.7abef457.chunk.css.map",
-    "static/css/main.a33622cc.chunk.css.map": "/weseleoliimateusza/static/css/main.a33622cc.chunk.css.map"
+    "static/css/main.c79b710d.chunk.css.map": "/weseleoliimateusza/static/css/main.c79b710d.chunk.css.map"
   }
 }
