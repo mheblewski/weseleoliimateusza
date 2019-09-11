@@ -1,8 +1,7 @@
 import React from 'react';
-import 'aos/dist/aos.css';
 import Title from './Title';
-import ContactCard from './ContactCard';
 import Counter from './Counter';
+import OurStory from './OurStory';
 
 class Informations extends React.Component {
 
@@ -10,8 +9,8 @@ class Informations extends React.Component {
         const img = process.env.PUBLIC_URL + "/images/counter-bg.jpg";
         return (
             <div id='informations'>
-                <Title text='Drodzy Goście...'/>
-                <div className='informations'>
+                <Title text='Drodzy Goście...' />
+                <div className='informations' data-aos="fade-up" data-aos-delay={this.props.delay}>
                    <p>
                     Mamy nadzieję, że tego dnia będziecie razem z nami.
                     Ceremonia ślubna odbędzie się w kościele pw. św. Tomasza
@@ -26,6 +25,7 @@ class Informations extends React.Component {
                    </p>
                 </div>
                 <Counter />
+                <OurStory />
             </div>
         );
     };

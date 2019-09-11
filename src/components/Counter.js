@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'aos/dist/aos.css';
 import Title from './Title';
 import CounterItem from './CounterItem';
 
@@ -46,7 +45,6 @@ class Counter extends React.Component {
         const el = ReactDOM.findDOMNode(this);
         const y =  el.getBoundingClientRect().y - document.documentElement.clientHeight;
         this.setState({
-            //offset: y < 0 ? Math.abs(y) : 0,
             offset: -y - document.documentElement.clientHeight,
             isArrowVisible: window.pageYOffset === 0
         });
@@ -59,36 +57,17 @@ class Counter extends React.Component {
         const bgImg = process.env.PUBLIC_URL + "/images/counter-bg3.jpg";
         return (
             <div id='counter' style={{ backgroundPositionY: this.state.offset/2, backgroundImage: `url(${bgImg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-                 <Title text='Do naszego ślubu pozostało:'/>
+                 <Title text='Do naszego ślubu pozostało:' />
                  <div className='counter-container'>
                      <div className='counter'>
-                         <CounterItem value={days} description='dni' />
-                         <CounterItem value={hours} description='godzin' />
-                         <CounterItem value={minutes} description='minut' />
-                         <CounterItem value={seconds} description='sekund' />
+                         <CounterItem value={days} description='dni' delay='50' />
+                         <CounterItem value={hours} description='godzin' delay='150' />
+                         <CounterItem value={minutes} description='minut' delay='250' />
+                         <CounterItem value={seconds} description='sekund' delay='350' />
                      </div>
                  </div>
              </div>
         )
-
-        // const leftCorner =  process.env.PUBLIC_URL + "/images/eucalyptus-left-corner.png";
-        // const rightCorner = process.env.PUBLIC_URL + "/images/eucalyptus-right-corner.png";
-
-        // return (
-        //     <div id='counter'>
-        //         <Title text='Do naszego ślubu pozostało:'/>
-        //         <div className='counter-container'>
-        //             <img className='left-corner' src={leftCorner}></img>
-        //             <div className='counter'>
-        //                 <CounterItem value={days} description='dni' />
-        //                 <CounterItem value={hours} description='godzin' />
-        //                 <CounterItem value={minutes} description='minut' />
-        //                 <CounterItem value={seconds} description='sekund' />
-        //             </div>
-        //             <img className='right-corner' src={rightCorner}></img>
-        //         </div>
-        //     </div>
-        // );
     };
 }
 

@@ -5,7 +5,8 @@
 }
 
 .informations p {
-    font-size: 60px;
+    font-family: 'Muli', sans-serif;
+    font-size: 40px;
     text-align: justify;
     margin: 0;
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import 'aos/dist/aos.css';
 
 class Header extends React.Component {
 
@@ -33,7 +32,7 @@ class Header extends React.Component {
             style={{ backgroundPositionY: this.state.offset/2, backgroundImage: `url(${image})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', maxHeight: '100vh', backgroundPosition: 'center'}}
           >
               <img src={image} style={{width: '100vw', maxWidth: '100%', height: 'auto', visibility: 'hidden'}}></img>
-              <a className='arrow' href="#about" style={{visibility: this.state.isArrowVisible ? 'visible' : 'hidden'}}><span></span><span></span><span></span></a>
+              <a className='arrow' href="#informations" style={{visibility: this.state.isArrowVisible ? 'visible' : 'hidden'}}><span></span><span></span><span></span></a>
           </div>
         );
     };

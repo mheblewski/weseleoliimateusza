@@ -70,6 +70,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Muli', sans-serif;
+
 }
 
 .menu-container ul a.current {
@@ -83,7 +85,7 @@
   }
 
 .menu-item {
-    font-size: 28px;
+    font-size: 22px;
     margin-left: 25px;
     color: white;
     text-decoration: none;

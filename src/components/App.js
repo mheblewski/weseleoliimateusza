@@ -3,6 +3,7 @@ import Header from './Header';
 import Informations from './Informations';
 import Contact from './Contact';
 import TopBar from './TopBar';
+import Footer from './Footer';
 
 class App extends React.Component {
 
@@ -13,6 +14,7 @@ class App extends React.Component {
                 <Header />
                 <Informations />
                 <Contact />
+                <Footer /> 
             </div>
         );
     };

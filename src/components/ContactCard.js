@@ -1,11 +1,10 @@
 import React from 'react';
-import 'aos/dist/aos.css';
 
 class ContactCard extends React.Component {
 
     render() {
         return (
-            <div className='contact-card'>
+            <div className={`contact-card ${this.props.additionalClass}`} data-aos="fade-left" data-aos-delay={this.props.delay} data-aos-anchor='.first-card'>
                 <img className='contact-image' src={this.props.image}></img>
                 <div className='contact-text'>
                     <p className='description'>{this.props.description}</p>
