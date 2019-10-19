@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/weseleoliimateusza/static/css/main.16489f90.chunk.css",
-    "main.js": "/weseleoliimateusza/static/js/main.5f1c4a92.chunk.js",
-    "main.js.map": "/weseleoliimateusza/static/js/main.5f1c4a92.chunk.js.map",
+    "main.css": "/weseleoliimateusza/static/css/main.5925cd2b.chunk.css",
+    "main.js": "/weseleoliimateusza/static/js/main.03d216c3.chunk.js",
+    "main.js.map": "/weseleoliimateusza/static/js/main.03d216c3.chunk.js.map",
     "runtime~main.js": "/weseleoliimateusza/static/js/runtime~main.4d93a59e.js",
     "runtime~main.js.map": "/weseleoliimateusza/static/js/runtime~main.4d93a59e.js.map",
     "static/css/2.7abef457.chunk.css": "/weseleoliimateusza/static/css/2.7abef457.chunk.css",
-    "static/js/2.7191dc69.chunk.js": "/weseleoliimateusza/static/js/2.7191dc69.chunk.js",
-    "static/js/2.7191dc69.chunk.js.map": "/weseleoliimateusza/static/js/2.7191dc69.chunk.js.map",
+    "static/js/2.bdf82c15.chunk.js": "/weseleoliimateusza/static/js/2.bdf82c15.chunk.js",
+    "static/js/2.bdf82c15.chunk.js.map": "/weseleoliimateusza/static/js/2.bdf82c15.chunk.js.map",
     "index.html": "/weseleoliimateusza/index.html",
-    "precache-manifest.27a07cad3435c4dad00fb25f57d6e1fd.js": "/weseleoliimateusza/precache-manifest.27a07cad3435c4dad00fb25f57d6e1fd.js",
+    "precache-manifest.91585f6a937752ac3c850e8320e46598.js": "/weseleoliimateusza/precache-manifest.91585f6a937752ac3c850e8320e46598.js",
     "service-worker.js": "/weseleoliimateusza/service-worker.js",
     "static/css/2.7abef457.chunk.css.map": "/weseleoliimateusza/static/css/2.7abef457.chunk.css.map",
-    "static/css/main.16489f90.chunk.css.map": "/weseleoliimateusza/static/css/main.16489f90.chunk.css.map"
+    "static/css/main.5925cd2b.chunk.css.map": "/weseleoliimateusza/static/css/main.5925cd2b.chunk.css.map"
   }
 }
