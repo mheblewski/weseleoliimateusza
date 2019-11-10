@@ -66,3 +66,64 @@
     margin-top: 20px;
     font-size: 2.2vw;
 }
+
+@media (max-width: 1024px) {
+
+    .contact-text .description,
+    .parents-description {
+        font-size: 3vw;
+    }
+    
+    .contact-text .name {
+        font-size: 3vw;
+    }
+
+    .parents-phone,
+    .contact-text .phone {
+        margin-top: 15px;
+        font-size: 3.5vw;
+    }
+    .contact-card {
+        border: 2px var(--main-gold-color) solid;
+        height: 19vw;
+    }
+}
+
+@media (max-width: 640px) {
+    .parents-description,
+    .contact-text .description {
+        font-size: 4vw;
+    }
+    
+    .contact-text .name {
+        font-size: 4vw;
+    }
+    .parents-phone,
+    .contact-text .phone {
+        margin-top: 8px;
+        font-size: 4vw;
+    }
+    .contact-card {
+        border: 1px var(--main-gold-color) solid;
+        height: 21vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .parents-description,
+    .contact-text .description {
+        font-size: 5vw;
+    }
+    
+    .contact-text .name {
+        font-size: 5vw;
+    }
+    .parents-phone,
+    .contact-text .phone {
+        margin-top: 8px;
+        font-size: 5vw;
+    }
+    .contact-card {
+        height: 26vw;
+    }
+}

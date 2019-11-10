@@ -1,0 +1,202 @@
+#localization {
+    width: 100vw;
+    max-width: 100%;
+}
+
+.localization {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.localization .left,
+.localization .right {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 150px;
+}
+
+.localization .left .localization-title,
+.localization .right .localization-title {
+    font-size: 4vw;
+    color: var(--main-gold-color);
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.localization .left .localization-info,
+.localization .right .localization-info {
+    font-family: 'Muli', sans-serif;
+    font-size: 1.6vw;
+    width: 100%;
+    text-align: center;
+}
+
+.localization .left .localization-info p,
+.localization .right .localization-info p {
+    margin: 10px;
+}
+
+.localization .left {
+    border-right: 0.075vw solid black;
+}
+
+.localization .right {
+    border-left: 0.075vw solid black;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 100%;
+    height: 65vh;
+}
+
+.marker {
+    margin-bottom: 30px;
+    width: 5vw;
+    height: auto;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.marker:hover {
+    cursor: pointer;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+  }
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+
+@media (max-width: 1024px) {
+    .marker {
+        width: 6vw;
+    }
+
+    .localization {
+        flex-direction: column;
+        width: 70%;
+        padding: auto;
+    }
+
+    .localization .left {
+        border-bottom: 0.1vw solid black;
+        border-right: 0;
+        margin: 0;
+        padding-top: 0;
+    }
+    
+    .localization .right {
+        border-top: 0.1vw solid black;
+        border-left: 0;
+        margin: 0;
+    }
+
+    .localization .left .localization-title,
+    .localization .right .localization-title {
+        font-size: 5vw;
+    }
+
+    .localization .left .localization-info,
+    .localization .right .localization-info {
+        font-size: 2.6vw;
+    }
+}
+
+@media (max-width: 640px) {
+    .marker {
+        width: 8vw;
+    }
+
+    .localization {
+        flex-direction: column;
+        width: 75%;
+        padding: auto;
+    }
+
+    .localization .left {
+        border-bottom: 0.1vw solid black;
+        border-right: 0;
+        margin: 0;
+        padding-top: 0;
+    }
+    
+    .localization .right {
+        border-top: 0.1vw solid black;
+        border-left: 0;
+        margin: 0;
+    }
+    
+    .localization .left .localization-title,
+    .localization .right .localization-title {
+        font-size: 6vw;
+    }
+
+    .localization .left .localization-info,
+    .localization .right .localization-info {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .marker {
+        width: 9vw;
+    }
+
+    .localization {
+        flex-direction: column;
+        width: 80%;
+        padding: auto;
+    }
+
+    .localization .left {
+        border-bottom: 0.1vw solid black;
+        border-right: 0;
+        margin: 0;
+        padding-top: 0;
+    }
+    
+    .localization .right {
+        border-top: 0.1vw solid black;
+        border-left: 0;
+        margin: 0;
+    }
+    
+    .localization .left .localization-title,
+    .localization .right .localization-title {
+        font-size: 7vw;
+    }
+
+    .localization .left .localization-info,
+    .localization .right .localization-info {
+        font-size: 4vw;
+    }
+}

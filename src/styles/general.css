@@ -4,8 +4,11 @@
 @import './informations.css';
 @import './contact-card.css';
 @import './top-bar.css';
+@import './top-bar-mobile.css';
 @import './our-story.css';
 @import './footer.css';
+@import './localization.css';
+@import './spinner.css';
 
 :root {
     --main-gold-color: #d4af37;
@@ -19,6 +22,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 ::-webkit-scrollbar {

@@ -4,8 +4,8 @@
 
 .arrow {
     position: absolute;
-    bottom: -20px;
-    left: 77.5%;
+    bottom: -30px;
+    left: 27.5%;
     z-index: 2;
     display: inline-block;
     -webkit-transform: translate(0, -50%);
@@ -32,7 +32,6 @@
     animation: sdb04 2s infinite;
     box-sizing: border-box;
 }
-
 
 @-webkit-keyframes sdb04 {
   0% {

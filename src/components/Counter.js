@@ -6,6 +6,8 @@ import CounterItem from './CounterItem';
 class Counter extends React.Component {
 
     state = {
+        width: window.innerWidth, 
+        height: window.innerHeight,
         days: 300,
         hours: 14,
         minutes: 15,
@@ -15,12 +17,9 @@ class Counter extends React.Component {
     
     weddingDate = new Date('Aug 29, 2020 00:00:00').getTime();
 
-    constructor() {
-        super()
-    }
-
     componentDidMount() {
         window.addEventListener('scroll', this.parallaxShift);
+        window.addEventListener('resize', this.updateWindowDimensions);
         setInterval( () => {
             const now = new Date().getTime();
             const distance = this.weddingDate - now;
@@ -39,6 +38,11 @@ class Counter extends React.Component {
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.parallaxShift);
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions = () => {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
     parallaxShift = () => {
@@ -55,8 +59,10 @@ class Counter extends React.Component {
 
         const { days, hours, minutes, seconds } = this.state;
         const bgImg = process.env.PUBLIC_URL + "/images/counter-bg3.jpg";
+        const isMobile = this.state.width < 1100;
+        const backgroundPosition = isMobile ? 0 : this.state.offset/2
         return (
-            <div id='counter' style={{ backgroundPositionY: this.state.offset/2, backgroundImage: `url(${bgImg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+            <div id='counter' style={{ backgroundPositionY: backgroundPosition, backgroundImage: `url(${bgImg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center 0' }}>
                  <Title text='Do naszego ślubu pozostało:' />
                  <div className='counter-container'>
                      <div className='counter'>

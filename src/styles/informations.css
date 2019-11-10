@@ -1,12 +1,12 @@
 .informations {
     width: 70%;
     margin: auto;
-    margin-bottom: 160px;
+    margin-bottom: 12vw;
 }
 
 .informations p {
     font-family: 'Muli', sans-serif;
-    font-size: 40px;
+    font-size: 2.1vw;
     text-align: justify;
     margin: 0;
 }
@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 150px;
+    margin-bottom: 10vw;
 }
 
 .contact-cards {
@@ -29,4 +29,50 @@
 .contact-bcg {
     width: 50%;
     background-size: cover;
+}
+
+@media (max-width: 1024px) {
+    .contact{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-cards {
+        width: 70%; 
+    }
+    .informations {
+        width: 75%;
+    }
+    .informations p {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-cards {
+        width: 80%; 
+    }
+    .informations {
+        width: 80%;
+    }
+    .informations p {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact .title {
+        height: 40vw;
+    }
+    .contact {
+        margin-bottom: 18vw;
+    }
+    .contact-cards {
+        width: 95%; 
+    }
+    .informations {
+        width: 80%;
+    }
+    .informations p {
+        font-size: 5vw;
+    }
 }

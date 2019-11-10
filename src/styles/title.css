@@ -2,15 +2,42 @@
     position: relative;
     width: 100vw;
     max-width: 100%;
-    height: 400px;
+    height: 20vw;
 }
 
 .title p {
-    font-size: 82px;
+    font-size: 5vw;
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%) 
+    transform: translate(-50%, -50%)
+}
+
+@media (max-width: 1024px) {
+    .title {
+        height: 30vw;
+    }
+    .title p {
+        font-size: 6vw;
+    }
+}
+
+@media (max-width: 640px) {
+    .title {
+        height: 40vw;
+    }
+    .title p {
+        font-size: 7.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        height: 45vw;
+    }
+    .title p {
+        font-size: 9vw;
+    }
 }

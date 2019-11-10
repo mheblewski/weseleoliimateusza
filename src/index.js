@@ -2,16 +2,9 @@ import './styles/general.css'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 ReactDOM.render(<App />, document.querySelector('#root'));
-
-AOS.init({
-  duration : 600
-});
-
-AOS.refresh();
 
 let mainNavLinks = document.querySelectorAll("nav ul li a");
 

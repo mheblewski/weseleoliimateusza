@@ -2,12 +2,12 @@ import React from 'react';
 
 class TopBar extends React.Component {
     
-    state = { sticked: false, currentNavElement: 'start' };
+    state = { sticked: true, currentNavElement: 'start' };
     navElementsMap = new Map([
-        ['start', 'Start'], 
+        // ['start', 'Start'], 
         ['informations', 'Informacje'],
-        ['contact', 'Kontakt'], 
-        ['localization', 'Lokalizacja']
+        ['localization', 'Lokalizacja'],
+        ['contact', 'Kontakt']
     ]);
 
     isCurrentNavElement(name) {
@@ -28,7 +28,7 @@ class TopBar extends React.Component {
                 this.setState({sticked: true});
             }
         } else {
-            this.setState({sticked: false});
+            this.setState({sticked: true});
         }
     }
 
@@ -50,9 +50,9 @@ class TopBar extends React.Component {
             <div className='menu'>
                 <div className ={`menu-background ${this.state.sticked ? 'sticked' : null}`}></div>
                 <div className='top-bar'>
-                    <div className='logo'>
+                    <a href={'#start'} className='logo'>
                         Aleksandra <mark className='gold'>&#9825;</mark> Mateusz
-                    </div>
+                    </a>
                     <nav className= 'menu-container'>
                         <ul>
                             { navElements }
