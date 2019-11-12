@@ -1,8 +1,8 @@
 .spinner-bg {
-    position: relative;
+    position: fixed;
     height: 100vh;
     width: 100vw;
-    max-width:100%;
+    max-width: 100%;
     background-color: white;
     z-index: 1;
     display: flex;
@@ -12,7 +12,8 @@
     -moz-animation: fadeInFromNone 0.5s ease-out;
     -o-animation: fadeInFromNone 0.5s ease-out;
     animation: fadeInFromNone 0.5s ease-out;
-}
+    z-index: 99999;
+  }
 
 .spinner-bg-small {
   position: relative;
@@ -21,7 +22,6 @@
   background-color: white;
   z-index: 1;
   display: flex;
-  align-items: center;
   -webkit-animation: fadeInFromNone 0.5s ease-out;
   -moz-animation: fadeInFromNone 0.5s ease-out;
   -o-animation: fadeInFromNone 0.5s ease-out;
@@ -34,14 +34,12 @@
     width: 64px;
     height: 64px;
     transform: rotate(45deg);
-    transform-origin: 33px 33px;
+    /* transform-origin: 33px 33px; */
   }
   .lds-heart div {
-    top: 23px;
-    left: 19px;
     position: absolute;
-    width: 46.1px;
-    height: 46.1px;
+    width: 70%;
+    height: 70%;
     background: #f47486;
     animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -50,16 +48,16 @@
     content: " ";
     position: absolute;
     display: block;
-    width: 46px;
-    height: 46px;
+    width: 100%;
+    height: 100%;
     background: #f47486;
   }
   .lds-heart div:before {
-    left: -21.5px;
+    left: -50%;
     border-radius: 50% 0 0 50%;
   }
   .lds-heart div:after {
-    top: -21.5px;
+    top: -50%;
     border-radius: 50% 50% 0 0;
   }
   @keyframes lds-heart {

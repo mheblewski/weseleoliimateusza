@@ -1,7 +1,7 @@
 .contact-card {
     /* width: 42%; */
     height: 12vw;
-    border: 3px var(--main-gold-color) solid;
+    border: 3px #d4af37 solid;
     display: flex;
     align-items: center;
     
@@ -30,7 +30,7 @@
 }
 
 .contact-text .description {
-    color: var(--main-gold-color);
+    color: #d4af37;
     font-size: 2.3vw;
     font-weight: bold;
 }
@@ -57,7 +57,7 @@
 }
 
 .parents-description {
-    color: var(--main-gold-color);
+    color: #d4af37;
     font-size: 1.9vw;
     font-weight: bold;
 }
@@ -84,7 +84,7 @@
         font-size: 3.5vw;
     }
     .contact-card {
-        border: 2px var(--main-gold-color) solid;
+        border: 2px #d4af37 solid;
         height: 19vw;
     }
 }
@@ -104,7 +104,7 @@
         font-size: 4vw;
     }
     .contact-card {
-        border: 1px var(--main-gold-color) solid;
+        border: 1px #d4af37 solid;
         height: 21vw;
     }
 }
