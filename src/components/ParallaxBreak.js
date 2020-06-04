@@ -33,9 +33,22 @@ class ParallaxBreak extends React.Component {
     render() {
         const bgImg = this.props.image;
         const isMobile = this.state.width < 1100;
-        const backgroundPosition = isMobile ? 0 : this.state.offset/2;
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+        let backgroundPosition = this.state.offset/2;
+        if (isMobile) {
+            backgroundPosition = 0;
+        }
+
+        var ua = window.navigator.userAgent;
+        var isIE = /MSIE|Trident/.test(ua);
+
+        if ( isIE ) {
+            backgroundPosition = 'center';
+        }
+
         return (
-            <div id='parallax-break' style={{ backgroundPositionY: backgroundPosition, backgroundImage: `url(${bgImg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: '65vh', backgroundPosition: 'center 0' }}>
+            <div id='parallax-break' style={{ backgroundPositionY: backgroundPosition, backgroundPositionX: 'center', backgroundImage: `url(${bgImg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: '65vh' }}>
              </div>
         )
     };

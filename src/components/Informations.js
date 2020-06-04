@@ -13,15 +13,14 @@ class Informations extends React.Component {
                 <div className='informations' data-aos="fade-up" data-aos-delay={this.props.delay}>
                    <p>
                     Mamy nadzieję, że tego dnia będziecie razem z nami.
-                    Ceremonia ślubna odbędzie się w kościele pw. św. Tomasza
+                    Ceremonia ślubna odbędzie się dnia 29.08.2020 w kościele pw. św. Tomasza
                     w Kietrzu, natomiast wesele i poprawiny w Domu Weselnym 
                     Rogożany. Dla przyjezdnych Gości zapewniamy nocleg.
 
                     Na poniższej stronie będziemy zamieszczać na bieżąco szczegóły
-                    dotyczące uroczystości. Dodatkowo znajdą się tutaj zdjęcia 
-                    i filmy z uroczystości zaraz po tym jak je otrzymamy. 
-                    Serdecznie zachęcamy do potwierdzania obecności za pomocą
-                    formularza dostępnego na stronie lub telefonicznie. 
+                    dotyczące uroczystości. Dodatkowo znajdziecie tutaj zdjęcia 
+                    i filmy z uroczystości zaraz po tym jak je otrzymamy.
+                    Serdecznie zachęcamy do potwierdzania obecności osobiście bądź telefonicznie.
                    </p>
                 </div>
                 <Counter />

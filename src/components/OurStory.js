@@ -12,7 +12,7 @@ class OurStory extends React.Component {
                 <div className='our-story'>
                    <img src={img}></img>
                 </div>
-                <ParallaxBreak image = {process.env.PUBLIC_URL + "/images/break.jpg"} />
+                <ParallaxBreak image = {process.env.PUBLIC_URL + "/images/milosc1.jpg"} />
             </div>
         );
     };

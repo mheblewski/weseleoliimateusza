@@ -2,23 +2,84 @@ import React from 'react';
 
 class TopBar extends React.Component {
     
-    state = { sticked: true, currentNavElement: 'start' };
+    state = {
+        sticked: true,
+        list: [
+          { key: 'informations', isCurrent: false },
+          { key: 'localization', isCurrent: false },
+          { key: 'contact', isCurrent: false }
+        ]
+      };
     navElementsMap = new Map([
         // ['start', 'Start'], 
         ['informations', 'Informacje'],
         ['localization', 'Lokalizacja'],
         ['contact', 'Kontakt']
     ]);
+    timer = null;
+    autoScroll = false;
 
-    isCurrentNavElement(name) {
-        return this.state.currentNavElement === name;
+    componentDidMount() {
+        window.addEventListener('scroll', this.scroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.scroll);
+    }
+
+    scroll = () => {
+        if(this.timer !== null) {
+            clearTimeout(this.timer);        
+        }
+        this.timer = setTimeout(() => {
+            this.autoScroll = false;
+        }, 150);
+        if (this.autoScroll) {
+            return;
+        }
+        const pageOffset = window.pageYOffset;
+        this.setState(state => {
+            const list = state.list.map(({key, current}) => {
+                let section = document.querySelector(`#${key}`);
+                const sectionOffset = [section.offsetTop, section.offsetTop + section.offsetHeight];
+                const isCurrent = sectionOffset[0] <= pageOffset && sectionOffset[1] > pageOffset;
+                return {key, isCurrent};
+            });
+            return { list };
+        });
+    }
+
+    onClick(key) {
+        this.autoScroll = true;
+        this.setCurrentElement(key);
+    }
+
+    setCurrentElement = (k) => {
+        this.setState(state => {
+            const list = state.list.map(({key, isCurrent}) => {
+                const current = k === key;
+                return {key, isCurrent: current};
+            });
+
+            return { list };
+        });
+        
     }
 
     getNavElements() {
         const navElements = [];
-        this.navElementsMap.forEach((nameToShow, key) => {
-            navElements.push(<li key={key}><a href={`#${key}`} className={`menu-item ${this.isCurrentNavElement(key) ? 'current' : null}`}>{nameToShow}</a></li>)
+        
+        this.state.list.forEach(({key, isCurrent}) => {
+            const nameToShow = this.navElementsMap.get(key);
+            navElements.push(
+                <li key={key}>
+                    <a href={`#${key}`} onClick={this.onClick.bind(this, key)} className={`menu-item ${isCurrent ? 'current' : null}`}>
+                        {nameToShow}
+                    </a>
+                </li>
+            )
         });
+
         return navElements;
     }
 
@@ -32,20 +93,8 @@ class TopBar extends React.Component {
         }
     }
 
-    processCurrentElement(position) {
-        
-    }
-
-    componentDidMount() {
-        window.addEventListener('scroll', () => {
-            const position = window.scrollY;
-            this.processSticked(position);
-        });
-    }
-
     render() {
         const navElements = this.getNavElements();
-
         return (
             <div className='menu'>
                 <div className ={`menu-background ${this.state.sticked ? 'sticked' : null}`}></div>

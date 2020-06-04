@@ -8,14 +8,14 @@ class Counter extends React.Component {
     state = {
         width: window.innerWidth, 
         height: window.innerHeight,
-        days: 300,
-        hours: 14,
-        minutes: 15,
-        seconds: 16,
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
         offset: 0
     }
-    
-    weddingDate = new Date('Aug 29, 2020 00:00:00').getTime();
+
+    weddingDate = new Date('Aug 29, 2020 15:30:00 GMT+0100').getTime();
 
     componentDidMount() {
         window.addEventListener('scroll', this.parallaxShift);
@@ -56,11 +56,10 @@ class Counter extends React.Component {
 
 
     render() {
-
         const { days, hours, minutes, seconds } = this.state;
         const bgImg = process.env.PUBLIC_URL + "/images/counter-bg3.jpg";
         const isMobile = this.state.width < 1100;
-        const backgroundPosition = isMobile ? 0 : this.state.offset/2
+        const backgroundPosition = isMobile ? 0 : this.state.offset/2;
         return (
             <div id='counter' style={{ backgroundPositionY: backgroundPosition, backgroundImage: `url(${bgImg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center 0' }}>
                  <Title text='Do naszego ślubu pozostało:' />

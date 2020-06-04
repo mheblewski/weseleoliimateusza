@@ -16,7 +16,6 @@ class Spinner extends React.Component {
       }
 
       componentWillReceiveProps(newProps) {
-        console.log(newProps);
         if(!newProps.mounted) {
             return this.unMountStyle()
         }
@@ -33,7 +32,7 @@ class Spinner extends React.Component {
           },
           bgStyle: {
             opacity: '0',
-            transition: 'all 1.5s ease',
+            transition: 'all 1.5s ease'
           }
         })
       }
@@ -41,7 +40,6 @@ class Spinner extends React.Component {
       
       transitionEnd(){
         if(!this.props.mounted){
-            console.log('unmounted')
             this.setState({
             show: false
           })

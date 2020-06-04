@@ -15,7 +15,7 @@ class Informations extends React.Component {
                     <div className='contact-cards'>
                         <ContactCard description='Panna Młoda' name='Aleksandra Niewiera' phone='+48 791 103 680' image={process.env.PUBLIC_URL + "/images/bride-icon.png"} delay='100' additionalClass='first-card'/>
                         <ContactCard description='Pan Młody' name='Mateusz Heblewski' phone='+48 609 261 411' image={process.env.PUBLIC_URL + "/images/groom-icon.png"} delay='200'/>
-                        <ParentsContactCard firstDescription='Mama Panny Młodej' firstPhone='+48 555 555 555' secondDescription='Mama Pana Młodego' secondPhone='+48 888 888 888' delay='300'/>
+                        <ParentsContactCard firstDescription='Mama Panny Młodej' firstPhone='+48 530 417 982' secondDescription='Mama Pana Młodego' secondPhone='+48 603 502 781' delay='300'/>
                     </div>
                 </div>
             </div>

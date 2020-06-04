@@ -14,7 +14,6 @@ class App extends React.Component {
     state = { contentLoaded: false, width: 0, height: 0 };
 
     onLoad = () => {
-        console.log('app')
         this.setState({contentLoaded: true});
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
@@ -40,11 +39,10 @@ class App extends React.Component {
 
     render() {
         const isMobile = this.state.width < 1100;
+        
         return (
             <div>
-                {/* {this.state.contentLoaded ? null :  */}
                     <Spinner onTransitionEnd={this.transitionEnd} mounted={!this.state.contentLoaded}/>
-                {/* } */}
                 <div style={this.state.contentLoaded ? {} : {display: 'none'}} className='content'>
                     { isMobile ? <TopBarMobile /> : <TopBar /> }
                     <Header onLoad={this.onLoad}/>

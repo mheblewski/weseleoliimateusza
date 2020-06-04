@@ -3,8 +3,8 @@ import React from 'react';
 class TopBarMobile extends React.Component {
     constructor(props){
       super(props);
-      this.state={
-        menuOpen:false,
+      this.state = {
+        menuOpen: false
       }
     }
     
@@ -31,7 +31,8 @@ class TopBarMobile extends React.Component {
             color: 'white'
           },
           logo: {
-            margin: '0 auto'
+            margin: '0 auto',
+            paddingRight: '32px'
           }
         }
 
@@ -75,9 +76,8 @@ class TopBarMobile extends React.Component {
   class MenuItem extends React.Component{
     constructor(props){
       super(props);
-      console.log(props);
       this.state = {
-        hover:false,
+        hover:false
       }
     }
     
@@ -90,7 +90,7 @@ class TopBarMobile extends React.Component {
         container: {
           opacity: 0,
           animation: '1s appear forwards',
-          animationDelay:this.props.delay,
+          animationDelay:this.props.delay
         },
         menuItem:{
           fontFamily:`'Open Sans', sans-serif`,
@@ -101,7 +101,7 @@ class TopBarMobile extends React.Component {
           color: this.state.hover? 'gray':'#fafafa',
           transition: 'color 0.2s ease-in-out',
           animation: '0.5s slideIn forwards',
-          animationDelay:this.props.delay,
+          animationDelay:this.props.delay
         },
         line: {
           width: '90%',
@@ -109,7 +109,7 @@ class TopBarMobile extends React.Component {
           background: 'gray',
           margin: '0 auto',
           animation: '0.5s shrink forwards',
-          animationDelay:this.props.delay,
+          animationDelay:this.props.delay
         }
       }
       return(
@@ -135,7 +135,7 @@ class TopBarMobile extends React.Component {
     constructor(props){
       super(props);
       this.state={
-        open: this.props.open? this.props.open:false,
+        open: this.props.open? this.props.open:false
       }
     }
       
@@ -159,10 +159,10 @@ class TopBarMobile extends React.Component {
           opacity: 0.95,
           color: '#fafafa',
           transition: 'height 0.3s ease',
-          zIndex: 2,
+          zIndex: 2
         },
         menuList: {
-          paddingTop: '3rem',
+          paddingTop: '3rem'
         }
       }
       return(
@@ -184,7 +184,7 @@ class TopBarMobile extends React.Component {
       super(props);
       this.state={
         open: this.props.open ? this.props.open : false,
-        color: this.props.color ? this.props.color : 'black',
+        color: this.props.color ? this.props.color : 'black'
       }
     }
   
@@ -208,28 +208,28 @@ class TopBarMobile extends React.Component {
           justifyContent: 'center',
           alignItems: 'center',
           cursor: 'pointer',
-          padding: '4px',
+          padding: '4px'
         },
         line: {
           height: '2px',
           width: '20px',
           background: this.state.color,
-          transition: 'all 0.2s ease',
+          transition: 'all 0.2s ease'
         },
         lineTop: {
           transform: this.state.open ? 'rotate(45deg)':'none',
           transformOrigin: 'top left',
-          marginBottom: '5px',
+          marginBottom: '5px'
         },
         lineMiddle: {
           opacity: this.state.open ? 0: 1,
-          transform: this.state.open ? 'translateX(-16px)':'none',
+          transform: this.state.open ? 'translateX(-16px)':'none'
         },
         lineBottom: {
           transform: this.state.open ? 'translateX(-1px) rotate(-45deg)':'none',
           transformOrigin: 'top left',
-          marginTop: '5px',
-        },       
+          marginTop: '5px'
+        }
       }
       return(
         <div style={styles.container} 
