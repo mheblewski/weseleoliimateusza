@@ -5,7 +5,6 @@ import Contact from './Contact';
 import TopBar from './TopBar';
 import TopBarMobile from './TopBarMobile';
 import Footer from './Footer';
-import Localization from './Localization';
 import Spinner from './Spinner';
 import AOS from 'aos';
 
@@ -47,7 +46,6 @@ class App extends React.Component {
                     { isMobile ? <TopBarMobile /> : <TopBar /> }
                     <Header onLoad={this.onLoad}/>
                     <Informations />
-                    <Localization />
                     <Contact />
                     <Footer />
                 </div>

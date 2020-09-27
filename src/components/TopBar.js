@@ -6,14 +6,12 @@ class TopBar extends React.Component {
         sticked: true,
         list: [
           { key: 'informations', isCurrent: false },
-          { key: 'localization', isCurrent: false },
           { key: 'contact', isCurrent: false }
         ]
       };
     navElementsMap = new Map([
         // ['start', 'Start'], 
         ['informations', 'Informacje'],
-        ['localization', 'Lokalizacja'],
         ['contact', 'Kontakt']
     ]);
     timer = null;

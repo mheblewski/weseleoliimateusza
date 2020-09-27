@@ -62,13 +62,13 @@ class Counter extends React.Component {
         const backgroundPosition = isMobile ? 0 : this.state.offset/2;
         return (
             <div id='counter' style={{ backgroundPositionY: backgroundPosition, backgroundImage: `url(${bgImg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center 0' }}>
-                 <Title text='Do naszego ślubu pozostało:' />
+                 <Title text='Nasze małżeństwo trwa już:' />
                  <div className='counter-container'>
                      <div className='counter'>
-                         <CounterItem value={days} description='dni' delay='50' />
-                         <CounterItem value={hours} description='godzin' delay='150' />
-                         <CounterItem value={minutes} description='minut' delay='250' />
-                         <CounterItem value={seconds} description='sekund' delay='350' />
+                         <CounterItem value={Math.abs(days)} description='dni' delay='50' />
+                         <CounterItem value={Math.abs(hours)} description='godzin' delay='150' />
+                         <CounterItem value={Math.abs(minutes)} description='minut' delay='250' />
+                         <CounterItem value={Math.abs(seconds)} description='sekund' delay='350' />
                      </div>
                  </div>
              </div>
